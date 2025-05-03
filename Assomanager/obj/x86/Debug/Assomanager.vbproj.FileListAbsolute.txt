@@ -30,3 +30,17 @@ C:\Users\m\Desktop\vbsolutions\workingvb2\Assomanager\bin\Debug\Assomanager.pdb
 C:\Users\m\Desktop\vbsolutions\workingvb2\Assomanager\bin\Debug\Assomanager.xml
 C:\Users\m\Desktop\vbsolutions\workingvb2\Assomanager\obj\x86\Debug\Assomanager.Form3.resources
 C:\Users\m\Desktop\vbsolutions\workingvb2\Assomanager\obj\x86\Debug\Assomanager.Form4.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.exe
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.xml
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.pdb
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form1.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form2.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form3.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form4.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form5.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Resources.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.vbproj.GenerateResource.Cache
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\bin\Debug\Assomanager.exe
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\bin\Debug\Assomanager.pdb
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\bin\Debug\Assomanager.xml
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form6.resources
