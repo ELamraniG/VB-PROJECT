@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Public Class Form13
 
-    Private nombredeventements13 As Integer = 0
+    Private nombredeventements As Integer = 0
     Private WithEvents DataGridView13 As New DataGridView
 
     Dim con As OleDbConnection
@@ -37,18 +37,15 @@ Public Class Form13
         dgv13.CellBorderStyle = DataGridViewCellBorderStyle.None
 
         ' Load events data instead of categoriedepenses
-        afficher_evenements13()
+        afficher_evenements()
 
-        nombredeventements13 = dgv13.Rows.Count
-        If nombredeventements13 = 0 Then
-            nombredeventements13 = 1
+        nombredeventements = dgv13.Rows.Count
+        If nombredeventements = 0 Then
+            nombredeventements = 1
         End If
 
         Controls.Add(DataGridView13)
         DataGridView13.Visible = False
-
-        ' Remove this line to prevent duplicate event handler
-        ' AddHandler ToolStripButton131.Click, AddressOf ToolStripButton131_Click
         
         AddHandler ToolStripButton132.Click, AddressOf ToolStripButton132_Click
         AddHandler ToolStripButton133.Click, AddressOf ToolStripButton133_Click
@@ -57,7 +54,7 @@ Public Class Form13
     End Sub
 
     ' Replaced with evenements handling
-    Public Sub afficher_evenements13()
+    Public Sub afficher_evenements()
         Try
             connexion()
             ' Changed query to order by ID instead of date
@@ -103,16 +100,16 @@ Public Class Form13
         ' This method should not be used anymore
     End Sub
 
-    Private Sub ToolStripButton131_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub ToolStripButton131_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton131.Click
         ' Open Form12 to add new event
         Dim frm As New Form12()
         frm.IsEditMode = False
-        frm.ParametreId = ""
-        frm.ParametreCle = ""
+        frm.ParametreId = ""  ' Added to ensure clean state
+        frm.ParametreCle = "" ' Added to ensure clean state
         frm.ShowDialog()
-
-        ' Refresh events after returning
-        afficher_evenements13()
+        
+        ' Refresh events after return
+        afficher_evenements()
     End Sub
 
     Private Sub dgv13_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
@@ -154,7 +151,7 @@ Public Class Form13
         frm.ShowDialog()
 
         ' Refresh events after return
-        afficher_evenements13()
+        afficher_evenements()
     End Sub
 
     Private Sub ToolStripButton132_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -177,14 +174,14 @@ Public Class Form13
                     MsgBox("ID de l'événement invalide", vbExclamation)
                 End If
                 con.Close()
-                afficher_evenements13()
+                afficher_evenements()
             End If
         End If
     End Sub
 
     Private Sub ToolStripButton133_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ' Refresh events list
-        afficher_evenements13()
+        afficher_evenements()
     End Sub
 
     Private Sub ToolStripButton134_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -207,7 +204,7 @@ Public Class Form13
         con.Close()
     End Sub
 
-    Private Sub ImprimerTousLesServicesToolStripMenuItem13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ImprimerTousLesServicesToolStripMenuItem13.Click
+    Private Sub ImprimerTousLesServicesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ImprimerTousLesServicesToolStripMenuItem.Click
         DirectCast(d13, Form).WindowState = FormWindowState.Maximized
         P13.DefaultPageSettings.Landscape = False
         d13.ShowDialog()
@@ -243,7 +240,7 @@ Public Class Form13
         DataGridView13.DataSource = dt.DefaultView
         con.Close()
 
-        nombredeventements13 = DataGridView13.Rows.Count
+        nombredeventements = DataGridView13.Rows.Count
     End Sub
 
     Private Sub dgv13_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgv13.CellContentClick
@@ -305,17 +302,5 @@ Public Class Form13
     End Sub
 
     Private Sub d13_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles d13.Load
-    End Sub
-
-    Private Sub ToolStripButton131_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton131.Click
-        ' Open Form12 to add new event
-        Dim frm As New Form12()
-        frm.IsEditMode = False
-        frm.ParametreId = ""  ' Added to ensure clean state
-        frm.ParametreCle = "" ' Added to ensure clean state
-        frm.ShowDialog()
-        
-        ' Refresh events after return
-        afficher_evenements13()
     End Sub
 End Class

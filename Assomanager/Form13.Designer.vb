@@ -34,7 +34,7 @@ Partial Class Form13
         Me.ToolStripButton134 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripDropDownButton131 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ImprimerTousLesServicesToolStripMenuItem13 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImprimerTousLesServicesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.P13 = New System.Drawing.Printing.PrintDocument()
         Me.d13 = New System.Windows.Forms.PrintPreviewDialog()
@@ -123,17 +123,17 @@ Partial Class Form13
         'ToolStripDropDownButton131
         '
         Me.ToolStripDropDownButton131.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton131.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImprimerTousLesServicesToolStripMenuItem13})
+        Me.ToolStripDropDownButton131.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImprimerTousLesServicesToolStripMenuItem})
         Me.ToolStripDropDownButton131.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton131.Name = "ToolStripDropDownButton131"
         Me.ToolStripDropDownButton131.Size = New System.Drawing.Size(13, 22)
         Me.ToolStripDropDownButton131.Text = "ToolStripDropDownButton1"
         '
-        'ImprimerTousLesServicesToolStripMenuItem13
+        'ImprimerTousLesServicesToolStripMenuItem
         '
-        Me.ImprimerTousLesServicesToolStripMenuItem13.Name = "ImprimerTousLesServicesToolStripMenuItem13"
-        Me.ImprimerTousLesServicesToolStripMenuItem13.Size = New System.Drawing.Size(248, 24)
-        Me.ImprimerTousLesServicesToolStripMenuItem13.Text = "Imprimer tous les services"
+        Me.ImprimerTousLesServicesToolStripMenuItem.Name = "ImprimerTousLesServicesToolStripMenuItem"
+        Me.ImprimerTousLesServicesToolStripMenuItem.Size = New System.Drawing.Size(248, 24)
+        Me.ImprimerTousLesServicesToolStripMenuItem.Text = "Imprimer tous les services"
         '
         'Label13
         '
@@ -172,7 +172,7 @@ Partial Class Form13
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form13"
-        Me.Text = "✅Gestion des événements"
+        Me.Text = "evenements"
         CType(Me.dgv13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip13.ResumeLayout(False)
         Me.ToolStrip13.PerformLayout()
@@ -182,7 +182,7 @@ Partial Class Form13
     End Sub
     Friend WithEvents ToolStrip13 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton131 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents nombredeservice13 As System.Windows.Forms.Label
+    Friend WithEvents nombredeservice As System.Windows.Forms.Label
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton132 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
@@ -191,7 +191,7 @@ Partial Class Form13
     Friend WithEvents ToolStripButton134 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripDropDownButton131 As System.Windows.Forms.ToolStripDropDownButton
-    Friend WithEvents ImprimerTousLesServicesToolStripMenuItem13 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ImprimerTousLesServicesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents P13 As System.Drawing.Printing.PrintDocument
     Friend WithEvents d13 As System.Windows.Forms.PrintPreviewDialog
     Friend WithEvents Label13 As System.Windows.Forms.Label
