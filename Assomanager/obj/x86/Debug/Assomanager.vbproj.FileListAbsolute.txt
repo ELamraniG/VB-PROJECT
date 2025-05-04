@@ -71,3 +71,4 @@ C:\Users\m\Desktop\vbsolutions\lopo\Assomanager\obj\x86\Debug\Assomanager.Form9.
 C:\Users\m\Desktop\vbsolutions\lopo\Assomanager\obj\x86\Debug\Assomanager.Resources.resources
 C:\Users\m\Desktop\vbsolutions\lopo\Assomanager\obj\x86\Debug\Assomanager.vbproj.GenerateResource.Cache
 C:\Users\m\Desktop\vbsolutions\lopo\Assomanager\obj\x86\Debug\Assomanager.Form13.resources
+C:\Users\m\Desktop\vbsolutions\lopo\Assomanager\obj\x86\Debug\Assomanager.Form14.resources
