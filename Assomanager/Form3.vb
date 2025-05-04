@@ -90,8 +90,6 @@ Public Class Form3
         
         Dim frm As New Form4()
         
-        frm.IsEditMode = True
-        
         Dim typeId As String = dgv2.Rows(i).Cells(0).Value.ToString()
         frm.ancienidtypeassociation.Text = typeId
         
@@ -183,6 +181,7 @@ Public Class Form3
             frm.TextBox1.Text = idtypeasso
             frm.TextBox0.Text = nomtypeasso
             frm.ancienidtypeassociation.Text = idtypeasso
+            frm.enregistrer2.Text = "Ajouter"
             frm.ShowDialog()
         End If
     End Sub
@@ -267,5 +266,9 @@ Public Class Form3
     End Sub
 
     Private Sub d2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles d2.Load
+    End Sub
+
+    Private Sub ToolStripButton1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
+
     End Sub
 End Class

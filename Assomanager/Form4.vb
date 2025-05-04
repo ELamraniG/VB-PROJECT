@@ -5,7 +5,6 @@ Public Class Form4
     Dim cmd As OleDbCommand
     Dim dr As OleDbDataReader
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Public Property IsEditMode As Boolean = False
     Dim requete As String
 
     Private Sub connexion()
@@ -27,19 +26,9 @@ Public Class Form4
             Me.Controls.Add(TextBox1)
         End If
         
-        ' Check edit mode based on ancienidtypeassociation or IsEditMode property
-        If IsEditMode OrElse (Not String.IsNullOrEmpty(ancienidtypeassociation.Text) AndAlso ancienidtypeassociation.Text <> "0") Then
-            enregistrer2.Text = "Modifier"
-            ancienidtypeassociation.Visible = True
-            IsEditMode = True
-        Else
-            enregistrer2.Text = "Ajouter"
+   
             ancienidtypeassociation.Visible = False
             TextBox1.Enabled = False
-            IsEditMode = False
-        End If
-
-        ' Make sure TextBox4 is configured correctly
         TextBox4.Multiline = True
         TextBox4.ScrollBars = ScrollBars.Vertical
     End Sub
@@ -47,28 +36,25 @@ Public Class Form4
     Private Sub enregistrer2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles enregistrer2.Click
         If TextBox0.Text.Trim() = "" Then
             MsgBox("Veuillez entrer un nom pour le type d'association", vbExclamation, "Données manquantes")
-            TextBox0.Focus()
             Return
         End If
 
-        connexion()
+
         
-        If Not IsEditMode OrElse enregistrer2.Text = "Ajouter" Then
-            ' For adding new record
+        If enregistrer2.Text = "Ajouter" Then
             requete = "INSERT INTO typeassociation (type, description) VALUES ('" & TextBox0.Text & "', '" & TextBox4.Text & "')"
+            MsgBox("kkkk")
         Else
-            ' For updating existing record - make sure we have a valid ID
-            ' Update query using the ID from ancienidtypeassociation
             requete = "UPDATE typeassociation SET type = '" & TextBox0.Text & "', description = '" & TextBox4.Text & "' WHERE idtypeassociation = " & ancienidtypeassociation.Text
         End If
-        
-        ' Execute the query
+
+        connexion()
         cmdsql()
         cmd.ExecuteNonQuery()
         
         con.Close()
 
-        ' Refresh data in parent form
+
         Dim f3 As Form3 = CType(Application.OpenForms("Form3"), Form3)
         If f3 IsNot Nothing Then
             f3.afficher_typeassociation()

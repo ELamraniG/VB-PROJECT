@@ -47,12 +47,12 @@ Partial Class Form3
         Me.dgv2.AllowUserToAddRows = False
         Me.dgv2.AllowUserToDeleteRows = False
         Me.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv2.Location = New System.Drawing.Point(177, 151)
-        Me.dgv2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgv2.Location = New System.Drawing.Point(133, 123)
+        Me.dgv2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgv2.Name = "dgv2"
         Me.dgv2.ReadOnly = True
         Me.dgv2.RowTemplate.Height = 28
-        Me.dgv2.Size = New System.Drawing.Size(213, 120)
+        Me.dgv2.Size = New System.Drawing.Size(160, 98)
         Me.dgv2.TabIndex = 0
         '
         'ToolStrip1
@@ -61,7 +61,7 @@ Partial Class Form3
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.ToolStripSeparator2, Me.ToolStripButton3, Me.ToolStripSeparator3, Me.ToolStripButton4, Me.ToolStripSeparator4, Me.ToolStripDropDownButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(900, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(675, 39)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -137,16 +137,17 @@ Partial Class Form3
         'ImprimerTousLesServicesToolStripMenuItem
         '
         Me.ImprimerTousLesServicesToolStripMenuItem.Name = "ImprimerTousLesServicesToolStripMenuItem"
-        Me.ImprimerTousLesServicesToolStripMenuItem.Size = New System.Drawing.Size(248, 24)
+        Me.ImprimerTousLesServicesToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
         Me.ImprimerTousLesServicesToolStripMenuItem.Text = "Imprimer tous les services"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(758, 14)
+        Me.Label2.Location = New System.Drawing.Point(568, 11)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 25)
+        Me.Label2.Size = New System.Drawing.Size(57, 20)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Label2"
         '
@@ -166,14 +167,14 @@ Partial Class Form3
         '
         'Form3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 505)
+        Me.ClientSize = New System.Drawing.Size(675, 410)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.dgv2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form3"
