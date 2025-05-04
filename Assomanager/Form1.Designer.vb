@@ -177,7 +177,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Gestion des services"
+        Me.Text = "Roles"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()

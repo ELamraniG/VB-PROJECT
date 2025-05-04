@@ -35,44 +35,47 @@ Partial Class Form2
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(28, 30)
+        Me.Label1.Location = New System.Drawing.Point(25, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 29)
+        Me.Label1.Size = New System.Drawing.Size(102, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID Service"
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(157, 24)
+        Me.TextBox1.Location = New System.Drawing.Point(140, 19)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(226, 35)
+        Me.TextBox1.Size = New System.Drawing.Size(201, 30)
         Me.TextBox1.TabIndex = 1
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(157, 80)
+        Me.TextBox2.Location = New System.Drawing.Point(140, 64)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(510, 35)
+        Me.TextBox2.Size = New System.Drawing.Size(454, 30)
         Me.TextBox2.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(28, 86)
+        Me.Label2.Location = New System.Drawing.Point(25, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 29)
+        Me.Label2.Size = New System.Drawing.Size(53, 25)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nom"
         '
         'enregistrer
         '
         Me.enregistrer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.enregistrer.Location = New System.Drawing.Point(33, 148)
+        Me.enregistrer.Location = New System.Drawing.Point(29, 118)
+        Me.enregistrer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.enregistrer.Name = "enregistrer"
-        Me.enregistrer.Size = New System.Drawing.Size(164, 65)
+        Me.enregistrer.Size = New System.Drawing.Size(146, 52)
         Me.enregistrer.TabIndex = 4
         Me.enregistrer.Text = "Ajouter"
         Me.enregistrer.UseVisualStyleBackColor = True
@@ -80,17 +83,17 @@ Partial Class Form2
         'ancienidservice
         '
         Me.ancienidservice.AutoSize = True
-        Me.ancienidservice.Location = New System.Drawing.Point(401, 30)
+        Me.ancienidservice.Location = New System.Drawing.Point(356, 24)
         Me.ancienidservice.Name = "ancienidservice"
-        Me.ancienidservice.Size = New System.Drawing.Size(57, 20)
+        Me.ancienidservice.Size = New System.Drawing.Size(51, 17)
         Me.ancienidservice.TabIndex = 5
         Me.ancienidservice.Text = "Label3"
         '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(703, 248)
+        Me.ClientSize = New System.Drawing.Size(625, 198)
         Me.Controls.Add(Me.ancienidservice)
         Me.Controls.Add(Me.enregistrer)
         Me.Controls.Add(Me.TextBox2)
@@ -98,10 +101,11 @@ Partial Class Form2
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form2"
-        Me.Text = "Formulaire de saisie d'un service"
+        Me.Text = "Roles_ajt"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

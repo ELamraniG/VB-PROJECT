@@ -103,7 +103,7 @@ Partial Class Form4
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form4"
-        Me.Text = "Formulaire de saisie d'un type d'association"
+        Me.Text = "typeassociations_ajt"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

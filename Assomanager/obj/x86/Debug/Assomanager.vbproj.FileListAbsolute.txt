@@ -46,3 +46,7 @@ C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\bin\Debug\Assomanager.xml
 C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form6.resources
 C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form7.resources
 C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form8.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form9.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form10.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form11.resources
+C:\Users\m\Desktop\vbsolutions\workingvb3\Assomanager\obj\x86\Debug\Assomanager.Form12.resources

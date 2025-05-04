@@ -1,9 +1,8 @@
 ﻿Imports System.Data.OleDb
 
-Public Class Form8
+Public Class Form10
     Dim con As OleDbConnection
     Dim cmd As OleDbCommand
-    Dim dr As OleDbDataReader
     Public Property IsEditMode As Boolean = False
     Public Property ParametreId As String = ""
     Dim requete As String
@@ -11,10 +10,10 @@ Public Class Form8
     ' Property for category name
     Public Property ParametreCle As String
         Get
-            Return TextBox81.Text
+            Return TextBox101.Text
         End Get
         Set(ByVal value As String)
-            TextBox81.Text = value
+            TextBox101.Text = value
         End Set
     End Property
 
@@ -28,13 +27,13 @@ Public Class Form8
         End Set
     End Property
 
-    ' Keep compatibility with Form7 if needed
+    ' Keep compatibility with Form9 if needed
     Public Property TypeName As String
         Get
-            Return TextBox81.Text
+            Return TextBox101.Text
         End Get
         Set(ByVal value As String)
-            TextBox81.Text = value
+            TextBox101.Text = value
         End Set
     End Property
 
@@ -57,46 +56,46 @@ Public Class Form8
         cmd = New OleDbCommand(requete, con)
     End Sub
 
-    Private Sub Form8_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Form10_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
-        Me.Text = "Catégorie de membre"
-        
-        ' Update label to reflect we're working with member categories
-        Label81.Text = "Nom:"
-        
+        Me.Text = "Catégorie de dépense"
+
+        ' Update label to reflect we're working with expense categories
+        Label101.Text = "Nom:"
+
         ' Hide the second TextBox and Label since we don't need them
-        Label82.Visible = False
-        
+        Label102.Visible = False
+
         ' Resize and reposition controls as needed
-        TextBox81.Height = 26
-        enregistrer8.Location = New Point(87, 80)  ' Move up the buttons
-        Button8.Location = New Point(236, 80)
+        TextBox101.Height = 26
+        enregistrer10.Location = New Point(87, 80)  ' Move up the buttons
+        Button10.Location = New Point(236, 80)
         Me.Height = 180  ' Make the form smaller
 
         If IsEditMode Then
-            enregistrer8.Text = "Modifier"
-            Button8.Text = "Annuler"
+            enregistrer10.Text = "Modifier"
+            Button10.Text = "Annuler"
         Else
-            enregistrer8.Text = "Ajouter"
-            Button8.Text = "Fermer"
+            enregistrer10.Text = "Ajouter"
+            Button10.Text = "Fermer"
         End If
     End Sub
 
-    Private Sub enregistrer8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles enregistrer8.Click
-        If TextBox81.Text.Trim() = "" Then
+    Private Sub enregistrer10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles enregistrer10.Click
+        If TextBox101.Text.Trim() = "" Then
             MsgBox("Veuillez entrer un nom de catégorie", vbExclamation, "Données manquantes")
-            TextBox81.Focus()
+            TextBox101.Focus()
             Return
         End If
 
         connexion()
 
-        If Not IsEditMode OrElse enregistrer8.Text = "Ajouter" Then
-            ' For adding new record - using categoriemembre table
-            requete = "INSERT INTO categoriemembre (nomcategoriemembre) VALUES ('" & TextBox81.Text & "')"
+        If Not IsEditMode OrElse enregistrer10.Text = "Ajouter" Then
+            ' For adding new record - using categoriedepenses table
+            requete = "INSERT INTO categoriedepenses (nomcategoriedepense) VALUES ('" & TextBox101.Text & "')"
         Else
-            ' For updating existing record - using categoriemembre table
-            requete = "UPDATE categoriemembre SET nomcategoriemembre = '" & TextBox81.Text & "' WHERE idcategoriemembre = " & ParametreId
+            ' For updating existing record - using categoriedepenses table
+            requete = "UPDATE categoriedepenses SET nomcategoriedepense = '" & TextBox101.Text & "' WHERE idcategoriedepense = " & ParametreId
         End If
 
         cmdsql()
@@ -104,7 +103,7 @@ Public Class Form8
             cmd.ExecuteNonQuery()
             con.Close()
 
-            Form7.afficher_entity()  ' Refresh the data in Form7
+            Form9.afficher_entity()  ' Refresh the data in Form9
 
             Me.Close()
         Catch ex As Exception
@@ -113,15 +112,15 @@ Public Class Form8
         End Try
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
         Me.Close()
     End Sub
 
-    Private Sub TextBox81_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox81.GotFocus
-        TextBox81.BackColor = Color.Aqua
+    Private Sub TextBox101_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox101.GotFocus
+        TextBox101.BackColor = Color.Aqua
     End Sub
 
-    Private Sub TextBox81_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox81.LostFocus
-        TextBox81.BackColor = Color.White
+    Private Sub TextBox101_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox101.LostFocus
+        TextBox101.BackColor = Color.White
     End Sub
 End Class

@@ -3,7 +3,7 @@ Public Class Form9
 
     Private nombredeentity As Integer = 0
     Private WithEvents DataGridView9 As New DataGridView
-    
+
     Dim con As OleDbConnection
     Dim cmd As OleDbCommand
     Dim requete As String
@@ -23,7 +23,7 @@ Public Class Form9
         Me.CenterToScreen()
         dgv8.Width = Me.Width - 50
         dgv8.Height = Me.Height - 120
-        Me.Text = "Gestion des catégories de membres"
+        Me.Text = "Gestion des catégories de dépenses"
 
         dgv8.BorderStyle = BorderStyle.None
         dgv8.DefaultCellStyle.Font = New Font("Arial", 10)
@@ -51,7 +51,7 @@ Public Class Form9
 
     Public Sub afficher_entity()
         connexion()
-        requete = "select * from categoriemembre"
+        requete = "select * from categoriedepenses"
         Dim da As New OleDbDataAdapter
         da = New OleDbDataAdapter(requete, con)
         Dim dt As New DataTable
@@ -66,8 +66,8 @@ Public Class Form9
     End Sub
 
     Private Sub ToolStripButton15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim frm As New Form8()
-        frm.Button8.Text = "Ajouter"
+        Dim frm As New Form10()
+        frm.Button10.Text = "Ajouter"
         frm.ParametreId = ""
         frm.ParametreCle = ""
         frm.ShowDialog()
@@ -81,20 +81,20 @@ Public Class Form9
             Return
         End If
 
-        Dim frm As New Form8()
+        Dim frm As New Form10()
         frm.IsEditMode = True
 
-        ' Map the categoriemembre table fields to Form8 properties
-        Dim categorieId As String = dgv8.Rows(i).Cells(0).Value.ToString() ' idcategoriemembre
+        ' Map the categoriedepenses table fields to Form10 properties
+        Dim categorieId As String = dgv8.Rows(i).Cells(0).Value.ToString() ' idcategoriedepense
         frm.ParametreId = categorieId
 
         If dgv8.Rows(i).Cells(1).Value IsNot Nothing Then
-            frm.ParametreCle = dgv8.Rows(i).Cells(1).Value.ToString() ' nomcategoriemembre
+            frm.ParametreCle = dgv8.Rows(i).Cells(1).Value.ToString() ' nomcategoriedepense
         Else
             frm.ParametreCle = ""
         End If
 
-        frm.Button8.Text = "Modifier"
+        frm.Button10.Text = "Modifier"
 
         frm.ShowDialog()
         afficher_entity()
@@ -102,22 +102,22 @@ Public Class Form9
 
     Private Sub ToolStripButton16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (dgv8.Rows.Count = 0) Then
-            MsgBox("Aucune catégorie...", vbExclamation, "Message")
+            MsgBox("Aucune catégorie de dépense...", vbExclamation, "Message")
         Else
             Dim rep As MsgBoxResult
-            rep = MsgBox("Etes-vous sûr de vouloir supprimer cette catégorie ?", vbQuestion + vbYesNo, "Message")
+            rep = MsgBox("Etes-vous sûr de vouloir supprimer cette catégorie de dépense ?", vbQuestion + vbYesNo, "Message")
             If (rep = vbYes) Then
                 connexion()
                 Dim i As Integer
                 i = dgv8.CurrentCell.RowIndex
                 Dim id As Integer
                 If Integer.TryParse(dgv8.Rows(i).Cells(0).Value.ToString(), id) Then
-                    requete = "DELETE FROM categoriemembre WHERE idcategoriemembre = " & id
+                    requete = "DELETE FROM categoriedepenses WHERE idcategoriedepense = " & id
                     cmdsql()
                     cmd.ExecuteNonQuery()
-                    MsgBox("Catégorie supprimée avec succès", vbInformation)
+                    MsgBox("Catégorie de dépense supprimée avec succès", vbInformation)
                 Else
-                    MsgBox("ID de la catégorie invalide", vbExclamation)
+                    MsgBox("ID de la catégorie de dépense invalide", vbExclamation)
                 End If
                 con.Close()
                 afficher_entity()
@@ -131,10 +131,10 @@ Public Class Form9
 
     Private Sub ToolStripButton18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim nomachercher As String
-        nomachercher = InputBox("Entrez le nom de la catégorie à chercher", "Rechercher par nom", "")
+        nomachercher = InputBox("Entrez le nom de la catégorie de dépense à chercher", "Rechercher par nom", "")
         If String.IsNullOrEmpty(nomachercher) Then Return
 
-        requete = "SELECT * FROM categoriemembre WHERE nomcategoriemembre LIKE '%" & nomachercher & "%'"
+        requete = "SELECT * FROM categoriedepenses WHERE nomcategoriedepense LIKE '%" & nomachercher & "%'"
         connexion()
         Dim da As New OleDbDataAdapter
         da = New OleDbDataAdapter(requete, con)
@@ -143,7 +143,7 @@ Public Class Form9
         dgv8.DataSource = dt.DefaultView
 
         If (dgv8.Rows.Count = 0) Then
-            MsgBox("Cette catégorie est introuvable.", vbExclamation, "Message")
+            MsgBox("Cette catégorie de dépense est introuvable.", vbExclamation, "Message")
         End If
         con.Close()
     End Sub
@@ -163,7 +163,7 @@ Public Class Form9
                 nomCategorie = DataGridView9.Rows(e.RowIndex).Cells(1).Value.ToString()
             End If
 
-            Dim frm As New Form8()
+            Dim frm As New Form10()
             frm.ParametreId = categorieId
             frm.ParametreCle = nomCategorie
             frm.ShowDialog()
@@ -174,7 +174,7 @@ Public Class Form9
         DataGridView9.DataSource = Nothing
         DataGridView9.Rows.Clear()
 
-        Dim mysql As String = "SELECT * FROM categoriemembre ORDER BY idcategoriemembre"
+        Dim mysql As String = "SELECT * FROM categoriedepenses ORDER BY idcategoriedepense"
 
         connexion()
         Dim da As New OleDbDataAdapter
@@ -206,7 +206,7 @@ Public Class Form9
             e.Graphics.DrawImage(imageToPrint, 40, 40, 40, 40)
         End If
 
-        e.Graphics.DrawString("Liste des catégories de membres", fontTitre, Brushes.Black, 90, 50)
+        e.Graphics.DrawString("Liste des catégories de dépenses", fontTitre, Brushes.Black, 90, 50)
         Dim ligne As New Pen(Color.Black)
         ln = ln + 30
 
@@ -218,15 +218,15 @@ Public Class Form9
         ln = ln + 30
 
         connexion()
-        Dim cmd As New OleDbCommand("SELECT idcategoriemembre, nomcategoriemembre FROM categoriemembre", con)
+        Dim cmd As New OleDbCommand("SELECT idcategoriedepense, nomcategoriedepense FROM categoriedepenses", con)
         Dim reader As OleDbDataReader = cmd.ExecuteReader()
 
         While reader.Read()
-            Dim id As String = reader("idcategoriemembre").ToString()
+            Dim id As String = reader("idcategoriedepense").ToString()
             Dim nom As String = ""
 
             If Not reader.IsDBNull(1) Then
-                nom = reader("nomcategoriemembre").ToString()
+                nom = reader("nomcategoriedepense").ToString()
             End If
 
             With e.Graphics
@@ -239,7 +239,7 @@ Public Class Form9
 
         reader.Close()
         con.Close()
-        e.Graphics.DrawString("Entreprise | Liste des catégories de membres", fontTitre, Brushes.Black, cl, 1100)
+        e.Graphics.DrawString("Entreprise | Liste des catégories de dépenses", fontTitre, Brushes.Black, cl, 1100)
     End Sub
 
     Private Sub ToolStripDropDownButton19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripDropDownButton19.Click

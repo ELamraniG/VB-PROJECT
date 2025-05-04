@@ -22,11 +22,9 @@ Partial Class Form8
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form8))
         Me.Label81 = New System.Windows.Forms.Label()
         Me.Label82 = New System.Windows.Forms.Label()
         Me.TextBox81 = New System.Windows.Forms.TextBox()
-        Me.TextBox82 = New System.Windows.Forms.TextBox()
         Me.enregistrer8 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -35,9 +33,10 @@ Partial Class Form8
         '
         Me.Label81.AutoSize = True
         Me.Label81.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label81.Location = New System.Drawing.Point(23, 31)
+        Me.Label81.Location = New System.Drawing.Point(31, 38)
+        Me.Label81.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label81.Name = "Label81"
-        Me.Label81.Size = New System.Drawing.Size(46, 20)
+        Me.Label81.Size = New System.Drawing.Size(59, 25)
         Me.Label81.TabIndex = 0
         Me.Label81.Text = "Nom:"
         '
@@ -45,9 +44,10 @@ Partial Class Form8
         '
         Me.Label82.AutoSize = True
         Me.Label82.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label82.Location = New System.Drawing.Point(23, 81)
+        Me.Label82.Location = New System.Drawing.Point(31, 100)
+        Me.Label82.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label82.Name = "Label82"
-        Me.Label82.Size = New System.Drawing.Size(57, 20)
+        Me.Label82.Size = New System.Drawing.Size(75, 25)
         Me.Label82.TabIndex = 1
         Me.Label82.Text = "Valeur:"
         Me.Label82.Visible = False
@@ -55,27 +55,19 @@ Partial Class Form8
         'TextBox81
         '
         Me.TextBox81.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox81.Location = New System.Drawing.Point(87, 28)
+        Me.TextBox81.Location = New System.Drawing.Point(116, 34)
+        Me.TextBox81.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox81.Name = "TextBox81"
-        Me.TextBox81.Size = New System.Drawing.Size(259, 26)
+        Me.TextBox81.Size = New System.Drawing.Size(344, 30)
         Me.TextBox81.TabIndex = 2
-        '
-        'TextBox82
-        '
-        Me.TextBox82.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox82.Location = New System.Drawing.Point(87, 78)
-        Me.TextBox82.Multiline = True
-        Me.TextBox82.Name = "TextBox82"
-        Me.TextBox82.Size = New System.Drawing.Size(259, 114)
-        Me.TextBox82.TabIndex = 3
-        Me.TextBox82.Visible = False
         '
         'enregistrer8
         '
         Me.enregistrer8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.enregistrer8.Location = New System.Drawing.Point(87, 80)
+        Me.enregistrer8.Location = New System.Drawing.Point(116, 98)
+        Me.enregistrer8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.enregistrer8.Name = "enregistrer8"
-        Me.enregistrer8.Size = New System.Drawing.Size(110, 43)
+        Me.enregistrer8.Size = New System.Drawing.Size(147, 53)
         Me.enregistrer8.TabIndex = 4
         Me.enregistrer8.Text = "Ajouter"
         Me.enregistrer8.UseVisualStyleBackColor = True
@@ -83,25 +75,25 @@ Partial Class Form8
         'Button8
         '
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(236, 80)
+        Me.Button8.Location = New System.Drawing.Point(315, 98)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(110, 43)
+        Me.Button8.Size = New System.Drawing.Size(147, 53)
         Me.Button8.TabIndex = 5
         Me.Button8.Text = "Fermer"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Form8
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 180)
+        Me.ClientSize = New System.Drawing.Size(512, 222)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.enregistrer8)
-        Me.Controls.Add(Me.TextBox82)
         Me.Controls.Add(Me.TextBox81)
         Me.Controls.Add(Me.Label82)
         Me.Controls.Add(Me.Label81)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form8"
@@ -114,7 +106,6 @@ Partial Class Form8
     Friend WithEvents Label81 As System.Windows.Forms.Label
     Friend WithEvents Label82 As System.Windows.Forms.Label
     Friend WithEvents TextBox81 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox82 As System.Windows.Forms.TextBox
     Friend WithEvents enregistrer8 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class

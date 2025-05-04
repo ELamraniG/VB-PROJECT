@@ -47,12 +47,12 @@ Partial Class Form7
         Me.dgv7.AllowUserToAddRows = False
         Me.dgv7.AllowUserToDeleteRows = False
         Me.dgv7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv7.Location = New System.Drawing.Point(133, 123)
-        Me.dgv7.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgv7.Location = New System.Drawing.Point(177, 151)
+        Me.dgv7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgv7.Name = "dgv7"
         Me.dgv7.ReadOnly = True
         Me.dgv7.RowTemplate.Height = 28
-        Me.dgv7.Size = New System.Drawing.Size(160, 98)
+        Me.dgv7.Size = New System.Drawing.Size(213, 121)
         Me.dgv7.TabIndex = 0
         '
         'ToolStrip7
@@ -61,7 +61,7 @@ Partial Class Form7
         Me.ToolStrip7.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton7, Me.ToolStripSeparator1, Me.ToolStripButton77, Me.ToolStripSeparator2, Me.ToolStripButton777, Me.ToolStripSeparator3, Me.ToolStripButton7777, Me.ToolStripSeparator4, Me.ToolStripDropDownButton7})
         Me.ToolStrip7.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip7.Name = "ToolStrip7"
-        Me.ToolStrip7.Size = New System.Drawing.Size(675, 39)
+        Me.ToolStrip7.Size = New System.Drawing.Size(900, 39)
         Me.ToolStrip7.TabIndex = 1
         Me.ToolStrip7.Text = "ToolStrip1"
         '
@@ -77,7 +77,7 @@ Partial Class Form7
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
         '
         'ToolStripButton77
         '
@@ -92,7 +92,7 @@ Partial Class Form7
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
         '
         'ToolStripButton777
         '
@@ -107,7 +107,7 @@ Partial Class Form7
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
         '
         'ToolStripButton7777
         '
@@ -122,7 +122,7 @@ Partial Class Form7
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
         '
         'ToolStripDropDownButton7
         '
@@ -137,17 +137,16 @@ Partial Class Form7
         'ImprimerTousLesServicesToolStripMenuItem
         '
         Me.ImprimerTousLesServicesToolStripMenuItem.Name = "ImprimerTousLesServicesToolStripMenuItem"
-        Me.ImprimerTousLesServicesToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
+        Me.ImprimerTousLesServicesToolStripMenuItem.Size = New System.Drawing.Size(248, 24)
         Me.ImprimerTousLesServicesToolStripMenuItem.Text = "Imprimer tous les services"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(568, 11)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(757, 14)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(57, 20)
+        Me.Label7.Size = New System.Drawing.Size(71, 25)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Label7"
         '
@@ -167,17 +166,17 @@ Partial Class Form7
         '
         'Form7
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(675, 410)
+        Me.ClientSize = New System.Drawing.Size(900, 505)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ToolStrip7)
         Me.Controls.Add(Me.dgv7)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form7"
-        Me.Text = "Gestion des services"
+        Me.Text = "categoriemembres"
         CType(Me.dgv7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip7.ResumeLayout(False)
         Me.ToolStrip7.PerformLayout()

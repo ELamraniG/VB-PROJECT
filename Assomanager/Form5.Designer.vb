@@ -176,7 +176,7 @@ Partial Class Form5
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form5"
-        Me.Text = "Gestion des services"
+        Me.Text = "parametres"
         CType(Me.dgv3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip11.ResumeLayout(False)
         Me.ToolStrip11.PerformLayout()

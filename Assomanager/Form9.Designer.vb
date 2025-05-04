@@ -61,16 +61,17 @@ Partial Class Form9
         Me.ToolStrip8.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton15, Me.ToolStripSeparator1, Me.ToolStripButton16, Me.ToolStripSeparator2, Me.ToolStripButton17, Me.ToolStripSeparator3, Me.ToolStripButton18, Me.ToolStripSeparator4, Me.ToolStripDropDownButton19})
         Me.ToolStrip8.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip8.Name = "ToolStrip8"
-        Me.ToolStrip8.Size = New System.Drawing.Size(900, 25)
+        Me.ToolStrip8.Size = New System.Drawing.Size(774, 39)
         Me.ToolStrip8.TabIndex = 1
         Me.ToolStrip8.Text = "ToolStrip1"
         '
         'ToolStripButton15
         '
         Me.ToolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton15.Image = CType(resources.GetObject("ToolStripButton15.Image"), System.Drawing.Image)
         Me.ToolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton15.Name = "ToolStripButton15"
-        Me.ToolStripButton15.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton15.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton15.Text = "Ajouter un service"
         '
         'ToolStripSeparator1
@@ -81,9 +82,10 @@ Partial Class Form9
         'ToolStripButton16
         '
         Me.ToolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton16.Image = CType(resources.GetObject("ToolStripButton16.Image"), System.Drawing.Image)
         Me.ToolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton16.Name = "ToolStripButton16"
-        Me.ToolStripButton16.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton16.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton16.Text = "ToolStripButton2"
         Me.ToolStripButton16.ToolTipText = "Supprimer"
         '
@@ -95,9 +97,10 @@ Partial Class Form9
         'ToolStripButton17
         '
         Me.ToolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton17.Image = CType(resources.GetObject("ToolStripButton17.Image"), System.Drawing.Image)
         Me.ToolStripButton17.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton17.Name = "ToolStripButton17"
-        Me.ToolStripButton17.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton17.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton17.Text = "ToolStripButton3"
         Me.ToolStripButton17.ToolTipText = "Actualiser"
         '
@@ -109,9 +112,10 @@ Partial Class Form9
         'ToolStripButton18
         '
         Me.ToolStripButton18.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton18.Image = CType(resources.GetObject("ToolStripButton18.Image"), System.Drawing.Image)
         Me.ToolStripButton18.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton18.Name = "ToolStripButton18"
-        Me.ToolStripButton18.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton18.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton18.Text = "ToolStripButton4"
         Me.ToolStripButton18.ToolTipText = "Rechercher un service"
         '
@@ -124,9 +128,10 @@ Partial Class Form9
         '
         Me.ToolStripDropDownButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ToolStripDropDownButton19.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImprimerTousLesServicesToolStripMenuItem})
+        Me.ToolStripDropDownButton19.Image = CType(resources.GetObject("ToolStripDropDownButton19.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton19.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton19.Name = "ToolStripDropDownButton19"
-        Me.ToolStripDropDownButton19.Size = New System.Drawing.Size(13, 22)
+        Me.ToolStripDropDownButton19.Size = New System.Drawing.Size(45, 36)
         Me.ToolStripDropDownButton19.Text = "ToolStripDropDownButton1"
         '
         'ImprimerTousLesServicesToolStripMenuItem
@@ -139,7 +144,7 @@ Partial Class Form9
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(757, 14)
+        Me.Label8.Location = New System.Drawing.Point(646, 25)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(71, 25)
         Me.Label8.TabIndex = 2
@@ -159,19 +164,20 @@ Partial Class Form9
         Me.d8.Name = "PrintPreviewDialog1"
         Me.d8.Visible = False
         '
-        'Form7
+        'Form9
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 505)
+        Me.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.ClientSize = New System.Drawing.Size(774, 372)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ToolStrip8)
         Me.Controls.Add(Me.dgv8)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "Form7"
-        Me.Text = "Gestion des services"
+        Me.Name = "Form9"
+        Me.Text = "✅categoriedepenses"
         CType(Me.dgv8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip8.ResumeLayout(False)
         Me.ToolStrip8.PerformLayout()
