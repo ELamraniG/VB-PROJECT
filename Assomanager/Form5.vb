@@ -3,7 +3,6 @@ Public Class Form5
 
     Private nombredeentity As Integer = 0
     Private WithEvents DataGridView5 As New DataGridView
-    Private WithEvents Button5 As New Button
     
     Dim con As OleDbConnection
     Dim cmd As OleDbCommand
@@ -41,12 +40,6 @@ Public Class Form5
 
         Controls.Add(DataGridView5)
         DataGridView5.Visible = False
-
-        Button5.Name = "Button5"
-        Button5.Text = "Ajouter Entity"
-        Button5.Size = New Size(150, 30)
-        Button5.Location = New Point(20, 20)
-        Controls.Add(Button5)
 
         AddHandler ToolStripButton11.Click, AddressOf ToolStripButton11_Click
         AddHandler ToolStripButton22.Click, AddressOf ToolStripButton22_Click
@@ -165,14 +158,6 @@ Public Class Form5
         DirectCast(d3, Form).WindowState = FormWindowState.Maximized
         P3.DefaultPageSettings.Landscape = False
         d3.ShowDialog()
-    End Sub
-
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        Dim frm As New Form6()
-        frm.ParametreId = ""
-        frm.ParametreCle = ""
-        frm.ParametreValeur = ""
-        frm.ShowDialog()
     End Sub
 
     Private Sub DataGridView5_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView5.CellDoubleClick

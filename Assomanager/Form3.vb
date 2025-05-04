@@ -3,7 +3,6 @@ Public Class Form3
 
     Private nombredetypeassociation As Integer = 0
     Private WithEvents DataGridView3 As New DataGridView
-    Private WithEvents Button6 As New Button
     
     Dim con As OleDbConnection
     Dim cmd As OleDbCommand
@@ -41,12 +40,6 @@ Public Class Form3
 
         Controls.Add(DataGridView3)
         DataGridView3.Visible = False
-
-        Button6.Name = "Button6"
-        Button6.Text = "Ajouter Type Association"
-        Button6.Size = New Size(150, 30)
-        Button6.Location = New Point(20, 20)
-        Controls.Add(Button6)
 
         AddHandler ToolStripButton1.Click, AddressOf ToolStripButton1_Click
         AddHandler ToolStripButton2.Click, AddressOf ToolStripButton2_Click
@@ -163,13 +156,6 @@ Public Class Form3
         DirectCast(d2, Form).WindowState = FormWindowState.Maximized
         P2.DefaultPageSettings.Landscape = False
         d2.ShowDialog()
-    End Sub
-
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Dim frm As New Form4()
-        frm.TextBox1.Text = ""
-        frm.TextBox0.Text = ""
-        frm.ShowDialog()
     End Sub
 
     Private Sub DataGridView3_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView3.CellDoubleClick
